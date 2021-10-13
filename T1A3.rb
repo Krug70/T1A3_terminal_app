@@ -1,4 +1,4 @@
-puts "Hi welcome to your Calories Counting App!"
+puts "Hi welcome to your Calories Counting App! My name is Leo"
 puts "Are you new here?"
 client = gets.chomp    
 if client == "yes" 
