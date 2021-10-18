@@ -17,13 +17,24 @@ else
     puts "Welcome back " + client + " let me retreive your recording..."
 end
 
+food[]
+calories[]
+
 class Meal
-    attr_meal :food, :calories
-    def initialize(food, calories)
-        @food = food
-        @calories = calories
+    attr_reader :client, :food, :calories
+    def initialize(client)
+        @name = client
+        @food[]
+        @calories[]
+    end
+    def meal(food)
+        @food << food
+    end
+    def intake(calories)
+        @calories << calories
     end
 end
+
 
 puts "What are you eating? "
 gets.choomp = food
