@@ -16,21 +16,17 @@ else
     client == gets.chomp 
     puts "Welcome back " + client + " let me retreive your recording..."
 end
-if new_client == "yes"
-    client = nickname
-    client = []
-    # client {meal_1: 0, meal_2: 0, meal_3: 0, meal_4: 0, meal_5: 0, meal_6: 0, meal_7: 0}
-    # client.each do |meal|
-    #     puts "for the #{meal} what food are you eating? "
-    meal = gets.chomp
-    client.each do |item|
-        item = meal
+
+class Meal
+    attr_meal :food, :calories
+    def initialize(food, calories)
+        @food = food
+        @calories = calories
     end
-
-
-    pus "and how many calories does it contain? "
-    calories = gets.chomp.to_i
-
-else
-    client {}
 end
+
+puts "What are you eating? "
+gets.choomp = food
+puts "How many calories is that? "
+gets.chomp.to_i = calories 
+
