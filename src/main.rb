@@ -20,10 +20,10 @@ else
     client == gets.chomp 
     puts "Welcome back " + client + " let me retreive your recording..."
     if client_list.include? client
-        
+
 end
 
-client_list = []
+# client_list = []
 
 class Client (client)
     attr_accessor
@@ -34,13 +34,23 @@ class Client (client)
     end
 end
 
-client = Client.new
-puts "What are you eating? "
-gets.choomp = food
-puts "How many calories is that? "
-gets.chomp.to_i = calories 
+puts "do you want to record a new meal?"
+new_meal = gets.chomp
 
-
+while new_meal != "yes" and new_meal != "no" 
+    puts "I don't understand your answer, can you please type yes or no?"
+    new_meal = gets.chomp
+    
+    if new_meal == "yes"
+    client = Client.new
+        puts "What are you eating? "
+        gets.chomp = food
+        puts "How many calories is that? "
+        gets.chomp.to_i = calories 
+      
+    end
+end
+end
 
 # food[]
 # calories[]
@@ -65,4 +75,3 @@ gets.chomp.to_i = calories
 # gets.choomp = food
 # puts "How many calories is that? "
 # gets.chomp.to_i = calories 
-
