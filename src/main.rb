@@ -8,6 +8,9 @@ while new_client != "yes" and new_client != "no"
     puts "I don't understand your answer, can you please type yes or no?"
     new_client = gets.chomp
 end     
+
+client_list = []
+
 if new_client == "yes" 
       puts:"What do you want to be called? "
       client = gets.chomp 
@@ -25,14 +28,6 @@ end
 
 # client_list = []
 
-class Client (client)
-    attr_accessor
-    def initialize
-        @client = client
-        @food = food
-        @calories = calories
-    end
-end
 
 puts "do you want to record a new meal?"
 new_meal = gets.chomp
@@ -40,6 +35,22 @@ new_meal = gets.chomp
 while new_meal != "yes" and new_meal != "no" 
     puts "I don't understand your answer, can you please type yes or no?"
     new_meal = gets.chomp
+    
+
+
+
+    class Client
+        attr_accessor :name, :food, :calories
+        def initialize
+            @name = name
+            @food = food
+            @calories = calories 
+        end
+    end
+
+    client.name = client
+
+    
     
     if new_meal == "yes"
     client = Client.new
@@ -52,26 +63,8 @@ while new_meal != "yes" and new_meal != "no"
 end
 end
 
-# food[]
-# calories[]
 
-# class Meal
-#     attr_reader :client, :food, :calories
-#     def initialize(client)
-#         @name = client
-#         @food = []
-#         @calories = []
-#     end
-#     def meal(food)
-#         @food << food
-#     end
-#     def intake(calories)
-#         @calories << calories
-#     end
-# end
 
-# Meal.new
-# puts "What are you eating? "
-# gets.choomp = food
-# puts "How many calories is that? "
-# gets.chomp.to_i = calories 
+
+
+
