@@ -1,68 +1,3 @@
-
-
-
-# puts "Hi welcome to your dayly Calories Counting App!"
-# puts "Are you new here? (yes/no)"
-# new_client = gets.chomp
-# while new_client != "yes" and new_client != "no" 
-#     puts "I don't understand your answer, can you please type yes or no?"
-#     new_client = gets.chomp
-# end     
-
-# client_list = []
-
-# if new_client == "yes" 
-#       puts:"What do you want to be called? "
-#       client = gets.chomp 
-#     puts "Hi " + client + ", please give me the amount of calories you wanna stick to every day"
-#     goal = gets.chomp.to_i
-#     puts "Great! Remember to record here your calorie intake everytime you consume food"
-    
-# else 
-#     puts "What name did you record yourself with?"
-#     client = gets.chomp 
-#     if client_list.include? client 
-#         puts "Welcome back " + client + " let me retreive your recording...""
-# end
-
-# client_list = []
-
-
-# puts "do you want to record a new meal?"
-# new_meal = gets.chomp
-
-# while new_meal != "yes" and new_meal != "no" 
-#     puts "I don't understand your answer, can you please type yes or no?"
-#     new_meal = gets.chomp
-# end  
-
-
-
-# class Client
-#     attr_accessor :name, :food, :calories
-#         def initialize
-#             @name = name
-#             @food = food
-#             @calories = calories 
-#         end
-# end
-
-
-# Client.name = client
-
-    
-    
-# if new_meal == "yes"
-#     client = Client.new
-#         puts "What are you eating? "
-#         gets.chomp = food
-#         puts "How many calories is that? "
-#         gets.chomp.to_i = calories 
-      
-# end
-
-
-
 puts "Hi what do you wanna be called? "
     name = gets.chomp 
 puts "Hi " + name + " tell me your calorie goal for this meal"
@@ -73,29 +8,20 @@ foods = {bread: 200, pasta: 250, rice: 180, apple: 50, banana: 80, egg: 75, chic
 puts "what are you having? (the calories are meant for 100 grams for each food)"
 food = gets.chomp 
 
-# p food
-# # def meal (food)
-# p foods.key?(food)
 intake = 0
    
     if foods.key?(food.to_sym)
         intake += foods [food.to_sym] 
         puts "Ok I've added #{food} calories to your calories count of this meal"
     else
+        new_food = food
         puts "I don't have this food in my database, I'll need you to type in "
-        puts "what's the food you are having?"
-        new_food = gets.chomp
-        puts "please tell me what's the amount of calories for 100 grams of this food"
+        puts "please tell me what's the amount of calories for 100 grams " + food
         new_food_calories = gets.chomp.to_i 
         foods.store(new_food, new_food_calories)
         intake += new_food_calories
     end
-# end
 
-
-
-
-# def calories_counting
     if intake == calorie_goal
         puts "you have used all your calories for the meal"
     elsif intake >= calorie_goal
@@ -104,10 +30,11 @@ intake = 0
         puts "you still have #{calorie_goal - intake} that you can use for this meal"
    
     end
-# end
 
-# calories_counting
-
+puts "do you wanna add more foods?"
+more = gets.chomp.to_b
+if more == true
+    
 
 
 
