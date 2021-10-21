@@ -17,11 +17,12 @@ food = gets.chomp
         intake += foods [food.to_sym] 
         puts "Ok I've added #{food} calories to your calories count of this meal"
     else
-        new_food = food
+        # new_food = food
         puts "I don't have this food in my database, I'll need you to type in "
         puts "please tell me what's the amount of calories for 100 grams " + food
         new_food_calories = gets.chomp.to_i 
-        foods.store(new_food, new_food_calories)
+        new_hash = {food: new_food_calories}
+        foods = foods.merge(new_hash)
         intake += new_food_calories
     end
 
