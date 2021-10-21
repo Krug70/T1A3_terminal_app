@@ -79,6 +79,20 @@ def meal
         gets.chomp = new_food
         puts "please tell me what's the amount of calories for 100 grams of this food"
         gets.chomp.to_i = new_food_calories
+        foods.store(new_food, new_food_calories)
+        intake += new_food_calories
+    end
+end
+
+meal
+def calories_counting
+    if intake == calorie_goal
+        puts "you have used all your calories for the meal"
+    elsif intake >= calorie_goal
+        puts "you went over your calorie gol of #{intake - calorie_goal} calories"
+    else
+        puts "you still have #{calorie_goal - intake} that you can use for this meal"
+    ensure
     end
 end
 
