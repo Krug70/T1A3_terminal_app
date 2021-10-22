@@ -17,12 +17,11 @@ food = gets.chomp
         intake += foods [food.to_sym] 
         puts "Ok I've added #{food} calories to your calories count of this meal"
     else
-        # new_food = food
         puts "I don't have this food in my database, I'll need you to type in "
         puts "please tell me what's the amount of calories for 100 grams " + food
         new_food_calories = gets.chomp.to_i 
-        new_hash = {food: new_food_calories}
-        foods = foods.merge(new_hash)
+        new_hash = {food.to_sym => new_food_calories}
+        foods.store(food.to_sym,new_food_calories)
         intake += new_food_calories
     end
 
@@ -32,16 +31,15 @@ food = gets.chomp
         puts "you went over your calorie goal by #{intake - calorie_goal} calories"
     else
         puts "you still have #{calorie_goal - intake} calories that you can use for this meal"
-   
     end
 
     puts "do you want to add more food? (yes or no)"
-     response = gets.chomp  
-     while response !="yes" and response !="no"
+        response = gets.chomp  
+    while response !="yes" and response !="no"
         puts "please type yes or no"
         response = gets.chomp  
-     end
-     if response == "no"
+    end
+    if response == "no"
         if intake == calorie_goal
             puts "you have used all your calories for the meal"
         elsif intake >= calorie_goal
@@ -50,13 +48,10 @@ food = gets.chomp
             puts "you saved #{calorie_goal - intake} calories for for this meal"
         end
         break
-        
-     end
+    end
 end
 
-# puts "do you wanna add more foods?"
-# more = gets.chomp.to_b
-# if more == true
+
     
 
 
