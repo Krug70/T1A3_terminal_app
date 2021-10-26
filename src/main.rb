@@ -1,19 +1,26 @@
-puts "Hi! What do you wanna be called? "
+puts "Welcome to your meal calories counting app"
+puts "This is DIET-TI!!"
+puts "If you wanna keep track of your meal calories, this app will make the maths for you...press a key!"
+x = gets
+puts "All you have to do is tell me your calorie goal for the meal, what are you having and I will workout how many calories you have got left!"
+puts "Please, tell me what do you wanna be called? "
     name = gets.chomp 
 puts "Hi " + name + " tell me your calorie goal for this meal"
     calorie_goal = gets.chomp.to_i
-
+    
 foods = {bread: 200, pasta: 250, rice: 180, apple: 50, banana: 80, egg: 75, chicken: 220, steak: 210, pork: 200, bacon: 400, beans: 110, tomato: 50, salad: 25, chips: 330, cheese: 450, sauce: 280, salami: 350, biscuit: 350, cola: 150, tuna: 180, milk: 150, juice: 110, hamburger: 550, muffin: 450, potatoes: 220}  
 
 intake = 0
 
 loop do
 
-puts "What are you having? (the calories are meant for 100 grams for each food)"
-food = gets.chomp 
+    puts "What are you having? (the calories are meant for 100 grams for each food)"
+    food = gets.chomp 
 
    
-    if foods.key?(food.to_sym)
+    
+    if  
+        foods.key?(food.to_sym)
         intake += foods [food.to_sym] 
         puts "Ok I've added #{food} calories to your calories count of this meal"
     else
@@ -24,7 +31,7 @@ food = gets.chomp
         foods.store(food.to_sym,new_food_calories)
         intake += new_food_calories
     end
-
+   
     if intake == calorie_goal
         puts "You have used all your calories for the meal"
     elsif intake >= calorie_goal
