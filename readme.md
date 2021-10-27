@@ -76,4 +76,42 @@
 
 ## Control Flow Diagram
 
-![Control Flow](/images/terminal_diagram.png)
+![Control Flow](/docs/terminal_diagram.png)
+
+## Implementation Plan
+
+[Check my Trello here](https://trello.com/b/j5S6yqWu/app-project-management)
+
+#### Original Plan
+
+![First page of my implementation plan](/docs/trello_1_a.png)
+![First page of my implementation plan](/docs/trello_1_b.png)
+
+#### Half Way Through
+
+![Second page of my implementation plan](/docs/trello_2_a.png)
+![Second page of my implementation plan](/docs/trello_2_b.png)
+
+#### Finished Implementation Plan
+
+![Third page of my implementation plan](/docs/trello_3_a.png)
+![Third page of my implementation plan](/docs/trello_3_b.png)
+
+## Instructions for the User:
+
+- If you don't have Ruby installed on your computer please download it here:
+[Ruby Download](https://www.ruby-lang.org/en/downloads/)
+- Go on this site: [GitHub](https://github.com/Krug70/T1A3_terminal_app). On the right you will find a green button that says CODE. Click on that and download the zip file.
+If you are not sure how to download from GitHub please check how to [clone it](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+- Once in your computer memory, open the app with Visual Studio Code and run the file main.rb
+
+## Hardware Requirements
+
+**Only tested on Windows 10, might not be suitable for Apple products**
+
+
+
+
+
+
+
