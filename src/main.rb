@@ -1,5 +1,5 @@
 puts "Welcome to your meal calories counting app"
-puts "This is DIET-TI!!"
+puts "This is DIET-IT!!"
 puts "If you wanna keep track of your meal calories, this app will make the maths for you...press a key!"
 x = gets
 puts "All you have to do is tell me your calorie goal for the meal, what are you having and I will workout how many calories you have got left!"
@@ -7,6 +7,13 @@ puts "Please, tell me what do you wanna be called? "
     name = gets.chomp 
 puts "Hi " + name + " tell me your calorie goal for this meal"
     calorie_goal = gets.chomp.to_i
+
+# # if 
+# #     calorie_goal.isNumbe
+    
+# else
+    
+# end
     
 foods = {bread: 200, pasta: 250, rice: 180, apple: 50, banana: 80, egg: 75, chicken: 220, steak: 210, pork: 200, bacon: 400, beans: 110, tomato: 50, salad: 25, chips: 330, cheese: 450, sauce: 280, salami: 350, biscuit: 350, cola: 150, tuna: 180, milk: 150, juice: 110, hamburger: 550, muffin: 450, potatoes: 220}  
 
