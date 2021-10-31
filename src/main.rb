@@ -1,13 +1,33 @@
-# Welcome message, collect the name and the calorie goal for the meal
+require 'colorize'
+
+#this will say what's the food on the 
+#adjurned database with the highest amount of calories
+def high_calorie_name (a)
+    a.key(a.values.max) 
+end
+
+def high_calorie_amount (a)
+    a.values.max
+end
+
+#Welcome message, collect the name and the calorie goal for the meal
+
+if ARGV.length == 0
+    puts "Your lucky number is 0"
+else 
+    puts "your lucky number is #{ARGV[0]}"
+end    
+ARGV.clear
+
 puts "Welcome to your meal calories counting app"
-puts "This is DIET-IT!!"
-puts "If you wanna keep track of your meal calories, this app will make the maths for you...press a key!"
+puts "This is DIET-IT!!".red
+puts "If you wanna keep track of your meal calories, this app will make the maths for you...press return!"
     x = gets
 puts "All you have to do is tell me your calorie goal for the meal, what are you having and I will workout how many calories you have got left!"
 puts "Please, tell me what do you wanna be called? "
     name = gets.chomp 
 
-puts "Hi " + name + " tell me your calorie goal for this meal"
+puts "Hi " + name + " tell me your calorie goal for this meal".yellow
     calorie_goal = gets.chomp
 
 # method that takes numeric input
@@ -61,14 +81,15 @@ loop do
         foods.store(food.to_sym,new_food_calories)
         intake += new_food_calories
     end
-#message that gives the calorie current count to the user
+    #message that gives the calorie current count to the user
     if intake == calorie_goal
-        puts "You have used all your calories for the meal"
+        puts "You have used all your calories for the meal".yellow
     elsif intake >= calorie_goal
-        puts "You went over your calorie goal by #{intake - calorie_goal} calories"
+        puts "You went over your calorie goal by #{intake - calorie_goal} calories".red
     else
-        puts "You still have #{calorie_goal - intake} calories that you can use for this meal"
+        puts "You still have #{calorie_goal - intake} calories that you can use for this meal".green
     end
+    puts "the food with the highest calories is #{high_calorie_name(foods)} with #{high_calorie_amount(foods)}"
     #option to run the loop again to input more food to the balance
     puts "Do you want to add more food? (type yes or no)"
         response = gets.chomp  
@@ -80,18 +101,20 @@ loop do
     #will give output with the final calorie balance
     if response == "no"
         if intake == calorie_goal
-            puts "You have used all your calories for the meal"
+            puts "You have used all your calories for the meal".yellow
         elsif intake >= calorie_goal
-            puts "You went over your calorie goal by #{intake - calorie_goal} calories"
+            puts "You went over your calorie goal by #{intake - calorie_goal} calories".red
         else
-            puts "You saved #{calorie_goal - intake} calories for for this meal"
+            puts "You saved #{calorie_goal - intake} calories for for this meal".green
         end
         break
     end
 end
 
 
-    
+
+
+
 
 
 
